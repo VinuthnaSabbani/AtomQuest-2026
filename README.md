@@ -11,7 +11,7 @@ npm start
 Then open:
 
 ```text
-http://localhost:3000
+http://localhost:3002
 ```
 
 The app uses a Node.js backend with no external dependencies. Persistent data is stored in `data/db.json`, which is created automatically on first run. Use **Reset demo data** in the UI to restore the seeded dataset.

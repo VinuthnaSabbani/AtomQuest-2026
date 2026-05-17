@@ -224,7 +224,7 @@ async function refreshState() {
     state = await api("/api/state");
   } catch {
     state = structuredClone(seedState);
-    flash("Backend is not reachable. Run npm start and open http://localhost:3000.", "error");
+    flash("Backend is not reachable. Run npm start and open http://localhost:3002.", "error");
   }
 }
 
