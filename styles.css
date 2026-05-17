@@ -322,16 +322,11 @@ h3 {
 .primary,
 .secondary,
 .ghost,
-.danger,
-.download-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.danger {
   min-height: 40px;
   border-radius: 7px;
   padding: 0 14px;
   font-weight: 800;
-  text-decoration: none;
 }
 
 .primary {
