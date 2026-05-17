@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoalSync</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="authView" class="auth-view">
+      <div class="auth-panel">
+        <div class="brand auth-brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span>GS</span>
+          </div>
+          <div>
+            <strong>GoalSync</strong>
+            <span>Goal Setting & Tracking Portal</span>
+          </div>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-auth-tab="login">Login</button>
+          <button class="auth-tab" data-auth-tab="signup">Sign up</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label class="field"><span>Email</span><input name="email" type="email" required value="employee@demo.com" /></label>
+          <label class="field"><span>Password</span><input name="password" type="password" required value="demo123" /></label>
+          <button class="primary">Login</button>
+          <p class="muted small">Demo accounts: employee@demo.com, manager@demo.com, admin@demo.com. Password: demo123</p>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+          <label class="field"><span>Full name</span><input name="name" required placeholder="Your name" /></label>
+          <label class="field"><span>Email</span><input name="email" type="email" required placeholder="you@company.com" /></label>
+          <label class="field"><span>Password</span><input name="password" type="password" minlength="4" required placeholder="Create password" /></label>
+          <label class="field"><span>Account type</span><select name="role" required><option value="employee">Employee</option><option value="manager">Manager L1</option><option value="admin">Admin / HR</option></select></label>
+          <button class="primary">Create account</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span>GS</span>
+          </div>
+          <div>
+            <strong>GoalSync</strong>
+            <span>Performance portal</span>
+          </div>
+        </div>
+
+        <div class="user-card">
+          <span class="eyebrow">Signed in</span>
+          <strong id="userName">Guest</strong>
+          <span id="userRole">Not logged in</span>
+          <button id="logoutBtn" class="ghost">Logout</button>
+        </div>
+
+        <nav class="nav-list">
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="goals">Goal Sheet</button>
+          <button class="nav-item" data-view="approvals">Approvals</button>
+          <button class="nav-item" data-view="checkins">Check-ins</button>
+          <button class="nav-item" data-view="admin">Admin & Reports</button>
+        </nav>
+
+        <div class="cycle-card">
+          <span class="eyebrow">Active cycle</span>
+          <strong>FY 2026 Goal Cycle</strong>
+          <p id="cycleHint">Phase 1 opens on 1 May for goal creation and approval.</p>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">GoalSync Portal</p>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="top-actions">
+            <button id="seedBtn" class="ghost">Reset demo data</button>
+            <button id="exportBtn" class="primary">Export CSV</button>
+          </div>
+        </header>
+
+        <section id="alertHost" class="alert-host" aria-live="polite"></section>
+
+        <section id="dashboardView" class="view active"></section>
+        <section id="goalsView" class="view"></section>
+        <section id="approvalsView" class="view"></section>
+        <section id="checkinsView" class="view"></section>
+        <section id="adminView" class="view"></section>
+      </main>
+    </div>
+
+    <template id="goalRowTemplate">
+      <article class="goal-row">
+        <div class="goal-main">
+          <div class="row-head">
+            <span class="tag thrust"></span>
+            <span class="tag uom"></span>
+            <span class="tag shared hidden">Shared</span>
+          </div>
+          <h3></h3>
+          <p></p>
+        </div>
+        <div class="goal-meta"></div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "goalsync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GoalSync full-stack Goal Setting and Tracking Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check app.js"
+  },
+  "keywords": [
+    "goals",
+    "performance",
+    "portal"
+  ],
+  "author": "",
+  "license": "MIT"
+}
